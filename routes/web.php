@@ -25,6 +25,6 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('dashboard',[PostController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::post('posts',[PostController::class, 'store'])->middleware(['auth', 'verified'])->name('posts.store');
-Route::delete('posts/{post}', [PostController::class, 'destroy'])->name('posts.index.destroy');
+Route::delete('posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
 
 require __DIR__.'/auth.php';
